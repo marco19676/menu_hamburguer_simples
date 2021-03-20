@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #2a2a2a;
+}
+
+.burguer{
+    background: purple;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    position: relative;
+    top: 100px;
+   border-radius: 10px;
+   border: solid yellow;
+}
+
+ .burguer::after{
+     content: '';
+    background: rgb(0, 0, 0);
+    padding: 20px;
+    width: 70%;
+    display: flex;
+    margin-left: 10%;
+    position: relative;
+    top: 19%;
+}
+
+.burguer::before{
+    content: '';
+   background: rgb(0, 0, 0);
+   padding: 20px;
+   width: 70%;
+   display: flex;
+   margin-left: 10%;
+   position: relative;
+   top: 55%;
+}
+
+#burguer:checked  ~ label  .burguer::after{
+    transform: rotate(225deg);
+    transition: 1.5s ease;
+    width: 40vh;
+    top: 38%;
+    background-color: yellow;
+   
+    
+}
+
+#burguer:checked  ~ label  .burguer::before{
+    transform: rotate(-225deg);
+    transition: 1s ease;
+    width: 40vh;
+    top: 50%;
+    background-color: yellow;
+    
+}
+
